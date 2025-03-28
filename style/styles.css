@@ -1,0 +1,57 @@
+/* Main background and text */
+.stApp {
+  background: #0e1117;
+  color: #eee;
+}
+
+/* Heading styling */
+h1 {
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #4a76a8;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* All other headings use blue color to match the theme */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4a76a8;
+}
+
+/* Metric cards. Styles for the KPI metrics (number values) */
+div[data-testid="stMetricValue"] {
+  color: #4a76a8;
+  font-size: 2rem !important;
+  font-weight: 700;
+}
+/* Styling for metric labels */
+div[data-testid="stMetricLabel"] {
+  color: #eee;
+  font-weight: 600;
+}
+/* Card styling. Styling for tab panel content */
+div.stTabs[data-baseweb="tab-panel"] {
+  background-color: #1e2130;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+/* Styling for tabs themselves */
+div.stTabs[data-baseweb="tab"] {
+  background-color: #0e1117;
+  color: #eee;
+  font-weight: 600;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+/* DataFrame styling */
+div.stDataFrame {
+  border: 1px solid #4a76a8;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
