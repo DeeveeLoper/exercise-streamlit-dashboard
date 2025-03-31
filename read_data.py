@@ -2,7 +2,6 @@ import pandas as pd
 from pathlib import Path
 
 def read_data():
-    
     # Creates the path to data folder
     data_path = Path(__file__).parent / "data"
     # Create data folder if doesen't exist
@@ -16,8 +15,7 @@ def read_data():
 if __name__ == '__main__':
     # Call the read_data function
     df = read_data()
+    print(f"All columns: {df.columns}")
     
-    print(df.columns)
-    
-    print("\nFirst 5 rows")
+    print("\nFirst 5 rows:")
     print(df.head())

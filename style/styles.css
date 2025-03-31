@@ -13,7 +13,6 @@ h1 {
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
 }
-
 /* All other headings use blue color to match the theme */
 h2,
 h3,
@@ -54,4 +53,23 @@ div.stDataFrame {
   border: 1px solid #4a76a8;
   border-radius: 0.5rem;
   overflow: hidden;
+}
+
+/* Additional styles for dark mode */
+.stPlotlyChart {
+  background-color: #1e2130;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.stSelectbox label,
+.stExpander label {
+  color: #eee;
+}
+
+.stExpander {
+  background-color: #1e2130;
+  border-radius: 0.5rem;
+  border: 1px solid #4a76a8;
 }

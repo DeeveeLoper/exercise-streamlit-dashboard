@@ -3,15 +3,14 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# Create streamlit diagram
-
 def employees_by_department_bar():
     
+    # Load data from CSV file
     df = read_data()
-    
+    # Count employees in each department and prepare data for chart
     dept_counts = df['Department'].value_counts().reset_index()
     dept_counts.columns = ['Department', 'Count']
-
+    # Create bar chart using Plotly Express
     fig = px.bar(
         dept_counts,
         x='Department',
@@ -20,19 +19,19 @@ def employees_by_department_bar():
         title="Antal Anställda per avdelning",
         color='Department'
     )
-
+    # Customize chart appearance
     fig.update_layout(
         xaxis_title="Avdelning",
         yaxis_title="Antal anställd",
-        showlegend=False
+        showlegend=False # Hide redundant legend
     )
-    
+    # Display the chart in Streamlit with responsive width
     st.plotly_chart(fig, use_container_width=True)
 
 def salary_distribution_histogram():
     
     df = read_data()
-    
+    # Create histogram of salary distribution
     fig = px.histogram(
         df, 
         x='Salary_SEK',
@@ -40,7 +39,7 @@ def salary_distribution_histogram():
         title="Lönefördelning",
         color_discrete_sequence=['#1E3A8A']
     )
-    
+    # Customize chart appearance
     fig.update_layout(
         xaxis_title="Lön (kr)",
         yaxis_title="Antal anställda" 
@@ -51,7 +50,7 @@ def salary_distribution_histogram():
 def salary_by_department_boxplot():
     
     df = read_data()
-        
+    # Create box plot comparing salaries across departments
     fig = px.box(
         df,
         x='Department',
@@ -106,7 +105,8 @@ def age_by_department_boxplot():
     )
     
     st.plotly_chart(fig, use_container_width=True)
-    
+
+# Code to test charts independently. Use: streamlit run charts.py
 if __name__ == '__main__':
     import streamlit as st
         
