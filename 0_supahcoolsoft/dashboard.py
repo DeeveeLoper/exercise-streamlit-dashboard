@@ -73,10 +73,3 @@ salary_by_department_boxplot()
 st.markdown("## Age Analysis")
 age_distribution_histogram()
 age_by_department_boxplot()
-
-# Footer
-st.markdown("---")
-st.markdown(
-    "<div style='text-align: center; color: gray; font-size: 12px;'>Executive Dashboard - Confidential | &copy; 2025 Supahcoolsoft</div>", 
-    unsafe_allow_html=True
-)

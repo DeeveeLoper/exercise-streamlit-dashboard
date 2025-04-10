@@ -16,13 +16,13 @@ def employees_by_department_bar():
         x='Department',
         y='Count',
         text='Count',
-        title="Antal Anställda per avdelning",
+        title="Number of employees per department",
         color='Department'
     )
     # Customize chart appearance
     fig.update_layout(
-        xaxis_title="Avdelning",
-        yaxis_title="Antal anställd",
+        xaxis_title="Department",
+        yaxis_title="Number of employees",
         showlegend=False # Hide redundant legend
     )
     # Display the chart in Streamlit with responsive width
@@ -36,13 +36,13 @@ def salary_distribution_histogram():
         df, 
         x='Salary_SEK',
         nbins=20,
-        title="Lönefördelning",
+        title="Salary distribution",
         color_discrete_sequence=['#1E3A8A']
     )
     # Customize chart appearance
     fig.update_layout(
-        xaxis_title="Lön (kr)",
-        yaxis_title="Antal anställda" 
+        xaxis_title="Salary (SEK)",
+        yaxis_title="Number of employees" 
     )
     
     st.plotly_chart(fig, use_container_width=True)
@@ -56,12 +56,12 @@ def salary_by_department_boxplot():
         x='Department',
         y='Salary_SEK',
         color='Department',
-        title="Löner per avdelning"
+        title="Salaries per department"
         )
     
     fig.update_layout(
-        xaxis_title="Avdelning",
-        yaxis_title="Lön (kr)",
+        xaxis_title="Department",
+        yaxis_title="Salary (SEK)",
         showlegend=False
     )
 
@@ -75,13 +75,13 @@ def age_distribution_histogram():
         df,
         x='Age',
         nbins=20,
-        title="Åldersfördlning",
+        title="Age distribution",
         color_discrete_sequence=['#1E3A8A']
     )
     
     fig.update_layout(
-        xaxis_title="Ålder",
-        yaxis_title="Antal anställd",
+        xaxis_title="Age",
+        yaxis_title="Number of employees",
     )
     
     st.plotly_chart(fig, use_container_width=True)
@@ -95,12 +95,12 @@ def age_by_department_boxplot():
         x='Department',
         y='Age',
         color='Department',
-        title="Ålder per avdelning",
+        title="Age per department",
     )
     
     fig.update_layout(
-        xaxis_title="Avdelning",
-        yaxis_title="Ålder",
+        xaxis_title="Department",
+        yaxis_title="Age",
         showlegend=False
     )
     
@@ -110,7 +110,7 @@ def age_by_department_boxplot():
 if __name__ == '__main__':
     import streamlit as st
         
-    st.title("Test av diagram")
+    st.title("Test of diagram")
     employees_by_department_bar()
     salary_distribution_histogram()
     salary_by_department_boxplot()
