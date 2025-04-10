@@ -14,7 +14,7 @@ def read_data():
         'LOCATION': 'location',
         'SUBJECT': 'subject',
         'TIME': 'time_period',
-        'VALUE': 'value',
+        'Value': 'value',
         'INDICATOR': 'indicator'
     }
     df = df.rename(columns=column_mapping)

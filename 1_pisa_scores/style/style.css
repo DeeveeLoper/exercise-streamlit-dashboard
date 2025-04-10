@@ -1,0 +1,72 @@
+/* Main background and text */
+.stApp {
+    background: #0e1117;
+    color: #eee;
+  }
+  
+  /* Heading styling */
+  h1 {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid #4a76a8;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  h2, h3, h4, h5, h6 {
+    color: #4a76a8;
+  }
+  
+  /* Metric cards */
+  div[data-testid="stMetricValue"] {
+    color: #4a76a8;
+    font-size: 2rem !important;
+    font-weight: 700;
+  }
+  
+  div[data-testid="stMetricLabel"] {
+    color: #eee;
+    font-weight: 600;
+  }
+  
+  /* Card styling */
+  div.stDataFrame {
+    border: 1px solid #4a76a8;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  /* Additional styles for dark mode */
+  .stPlotlyChart {
+    background-color: #1e2130;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .stSelectbox label, .stExpander label {
+    color: #eee;
+  }
+  
+  .stExpander {
+    background-color: #1e2130;
+    border-radius: 0.5rem;
+    border: 1px solid #4a76a8;
+  }
+  
+  /* Tab styling */
+  div.stTabs[data-baseweb="tab-panel"] {
+    background-color: #1e2130;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+  }
+  
+  div.stTabs[data-baseweb="tab"] {
+    background-color: #0e1117;
+    color: #eee;
+    font-weight: 600;
+    border-radius: 0.25rem 0.25rem 0 0;
+  }
